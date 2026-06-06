@@ -1,0 +1,48 @@
+
+/* Basic site styles for git-demo project */
+:root{
+	--bg:#f7f7f9;
+	--card:#ffffff;
+	--muted:#6c757d;
+	--accent:#007bff;
+	--radius:6px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+	font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background:var(--bg);
+	color:#222;
+	line-height:1.5;
+	padding:24px;
+}
+
+.container{max-width:1100px;margin:0 auto}
+
+header.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:transparent}
+.site-title{font-size:1.25rem;font-weight:600;color:var(--accent)}
+
+/* Card */
+.card{background:var(--card);border-radius:var(--radius);box-shadow:0 1px 3px rgba(16,24,40,0.06);padding:16px;margin:12px 0}
+
+.muted{color:var(--muted)}
+
+/* Buttons */
+.btn{display:inline-block;padding:8px 14px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;border:0;cursor:pointer}
+.btn.secondary{background:#e9ecef;color:#212529}
+
+/* Simple responsive utility */
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.col{flex:1 1 0}
+
+/* Forms */
+input[type="text"],textarea,select{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:6px}
+
+/* Footer */
+footer{margin-top:32px;padding:12px 0;color:var(--muted);font-size:0.9rem;text-align:center}
+
+@media (max-width:600px){
+	.site-title{font-size:1rem}
+	.row{flex-direction:column}
+}
